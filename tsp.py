@@ -7,7 +7,9 @@ from algorithms import Algorithms, HelperFunctions
 
 # Constants
 TESTS = (
-    500,
+    1000,
+    3000,
+    5000,
 )  # Test the algorithms with city matrices of size 1000x1000, 3000x3000, and 5000x5000
 DISTANCE_MAX_VALUE = 1000  # The maximum distance between two cities in the city matrix
 MAX_SHOW_TOUR_LENGTH = 10  # The maximum number of cities to show in the tour before setting show_tours to False in outprint()
