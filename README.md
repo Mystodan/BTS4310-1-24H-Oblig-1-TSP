@@ -17,6 +17,18 @@ The Nearest Neighbor heuristic for TSP is a greedy algorithm that builds a tour 
 5. Return the Tour and Time Taken: Return the sequence of visited cities (the tour) and the time taken to compute it.
 
 ### Results
+This is the results after running the code with theese settings:
+```py
+# Constants
+TESTS = (
+    1000,
+    3000,
+    5000,
+)  # Test the algorithms with city matrices of size 1000x1000, 3000x3000, and 5000x5000
+DISTANCE_MAX_VALUE = 1000  # The maximum distance between two cities in the city matrix
+MAX_SHOW_TOUR_LENGTH = 3  # The maximum number of cities to show in the tour before setting show_tours to False in outprint()
+
+```
 1. 1000 Tours
 ```
 time elapsed to solve using a basic random algorithm: 
@@ -86,7 +98,18 @@ old distance:
 new distance:
         5000
 ```
-Using this command in the terminal from root would run the application
+<br>After running the code with 1000x1000, 3000x3000, and 5000x5000 cities, it should be apparant that the time taken to run each test increase significantly, this is due to the complexity of the problem being run multiple times. In 5000x5000 using the greedy algorithm already comes close to the optimal solution, however in order to find the optimal solution, the time elapsed is significantly increased:
+- 1000x1000 -> 3000x3000 -> 5000x5000
+- 7.43870685 minutes (446.32241129875183 seconds) -> 1.9874156 hours (7154.696163415909 seconds) -> 4.68095245 hours (16851.42881512642)
+
+<br>This means that the time has increased:
+- from 1000x1000 -> 3000x3000 increase by 1.86343715 hours
+- from 3000x3000 -> 5000x5000 increase by 2.69353685 hours
+<br>And this is with threading.
+
+### Running the file
+
+Using this command in the terminal from root would run the file
 ```sh
 python .\tsp.py   
 ```
